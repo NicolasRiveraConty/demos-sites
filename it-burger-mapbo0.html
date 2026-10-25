@@ -1,381 +1,271 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>It Burger | Prévia do site</title>
-<meta name="description" content="Prévia (versão inicial) do site do It Burger, hamburgueria em Tatuapé, São Paulo.">
-<meta name="theme-color" content="#0C0C0C">
-<meta name="robots" content="noindex, nofollow">
-<meta property="og:type" content="website">
-<meta property="og:title" content="It Burger | Prévia do site">
-<meta property="og:description" content="Prévia (versão inicial) do site do It Burger, hamburgueria em Tatuapé, São Paulo.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&amp;fit=crop&amp;w=1800&amp;q=80">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "It Burger", "servesCuisine": "Hamburgueria", "address": {"@type": "PostalAddress", "streetAddress": "", "addressLocality": "São Paulo"}, "hasMenu": "#cardapio", "telephone": "(11) 2649-2418", "image": "https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=1800&q=80"}</script>
+<meta name="description" content="Prévia do site do It Burger, hamburgueria em Tatuapé, São Paulo.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#14100E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="fotos-it-burger-01-m.jpg" imagesrcset="fotos-it-burger-01-m.jpg 720w, fotos-it-burger-01.jpg 1080w" imagesizes="100vw">
 <style>
-:root{
-  --primaria:#F26A0F;
-  --secundaria:#4A1E03;
-  --destaque:#FFB400;
-  --fundo:#0C0C0C;
-  --fundo2:#1A1A19;
-  --texto:#F8F3EA;
-  --suave:#ACA9A3;
-  --borda:rgba(248,243,234,.13);
-  --f-titulo:'Bebas Neue', system-ui, sans-serif;
-  --f-corpo:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --raio:12px;
-  --sombra:0 18px 50px -18px rgba(0,0,0,.45);
-  --peso-titulo:400;
-  --caixa-titulo:uppercase;
-  --track-titulo:.04em;
-  --raio-btn:999px;
-  --raio-logo:8px;
-  --destaque-hero:#FFB400;
-  --faixa-txt:#111;
-  --rodape:#000;
-  --ov:0,0,0;
-  --ovk:0.95;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--f-corpo);background:var(--fundo);color:var(--texto);line-height:1.65;font-size:17px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+:root{--bg:#14100E;--bg2:#1C1714;--tx:#F6EEE2;--soft:#A09A91;--line:#383430;--card:#1F1B19;--pri:#D62828;--pri-tx:#FFFFFF;--acc:#F5C518;--acc-tx:#1A1210;--acc-l:#F5C518;--acc-t:#F5C518;--wt:700;--ls:-.01em;--f-t:'Playfair Display',Georgia,serif;--f-b:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;--r:14px;--ft:#0D0A09;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:78px;-webkit-text-size-adjust:100%}
+body{font-family:var(--f-b);background:var(--bg);color:var(--tx);line-height:1.65;font-size:1rem;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:var(--f-titulo);line-height:1.15;font-weight:var(--peso-titulo);letter-spacing:var(--track-titulo);text-transform:var(--caixa-titulo)}
-.container{width:min(1160px,100% - 40px);margin-inline:auto}
-section{padding:96px 0;position:relative}
-.eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--destaque);font-weight:600;margin-bottom:14px}
-.section-title{font-size:clamp(2rem,4.4vw,3.2rem);margin-bottom:16px}
-.section-sub{color:var(--suave);max-width:620px;font-size:1.05rem}
-.center{text-align:center}.center .section-sub{margin-inline:auto}
+ul{list-style:none}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+:focus-visible{outline:2px solid var(--acc-t);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+svg{width:1.25em;height:1.25em;flex:none}
+.pulo{position:absolute;left:12px;top:-60px;background:var(--pri);color:var(--pri-tx);padding:10px 16px;border-radius:8px;z-index:100;transition:top .2s}
+.pulo:focus{top:12px}
 
-/* faixa demo */
-.faixa-demo{background:var(--destaque);color:var(--faixa-txt);font-size:.8rem;font-weight:600;text-align:center;padding:7px 14px;line-height:1.3;letter-spacing:.02em;position:fixed;top:0;left:0;right:0;z-index:80}
-body.tem-faixa header.topo{top:32px}
-body.tem-faixa .hero{padding-top:170px}
-
-/* header */
-header.topo{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .35s,box-shadow .35s,padding .35s,transform .35s;padding:20px 0}
-header.topo::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .35s;background:color-mix(in srgb,var(--fundo) 86%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--borda)}
-header.topo.rolou::before{opacity:1}
-header.topo.rolou{padding:12px 0}
-.topo .container{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-family:var(--f-titulo);font-size:1.45rem;font-weight:var(--peso-titulo);text-transform:var(--caixa-titulo);letter-spacing:var(--track-titulo);color:#fff;display:flex;align-items:center;gap:10px}
-header.topo.rolou .logo{color:var(--texto)}
-.logo i{width:34px;height:34px;border-radius:var(--raio-logo);background:var(--primaria);display:grid;place-items:center;font-style:normal;font-size:1rem;color:#fff}
-nav.menu{display:flex;gap:30px;align-items:center}
-nav.menu a{font-size:.95rem;color:rgba(255,255,255,.88);position:relative;padding:4px 0;transition:color .2s}
-header.topo.rolou nav.menu a{color:var(--texto)}
-nav.menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--destaque);transition:width .3s}
-nav.menu a:not(.btn):hover::after{width:100%}
-.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;position:relative}
-.burger span,.burger span::before,.burger span::after{content:"";position:absolute;left:10px;right:10px;height:2px;background:#fff;border-radius:2px;transition:.3s}
-.burger span{top:21px}.burger span::before{top:-7px;left:0;right:0}.burger span::after{top:7px;left:0;right:0}
-header.topo.rolou .burger span,header.topo.rolou .burger span::before,header.topo.rolou .burger span::after{background:var(--texto)}
-header.topo.aberto .burger span{background:transparent!important}
-header.topo.aberto .burger span::before{top:0;transform:rotate(45deg)}
-header.topo.aberto .burger span::after{top:0;transform:rotate(-45deg)}
+/* tipografia */
+h1,h2,h3{font-family:var(--f-t);font-weight:var(--wt);line-height:1.1;letter-spacing:var(--ls)}
+h2{font-size:clamp(2rem,5vw,3.3rem)}
+.etq{display:inline-flex;align-items:center;gap:12px;font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--acc-t);margin-bottom:16px}
+.etq::before{content:"";width:28px;height:1.5px;background:currentColor}
+.etq-hero{color:var(--acc-l)}
+.sec{padding:clamp(72px,10vw,128px) 0}
+.sec-alt{background:var(--bg2)}
+.sec-h{max-width:640px;margin-bottom:clamp(32px,5vw,56px)}
+.sec-h p{margin-top:16px;color:var(--soft)}
 
 /* botoes */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;border-radius:var(--raio-btn);font-weight:600;font-size:1rem;border:2px solid transparent;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s,color .25s;font-family:var(--f-corpo)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 28px;border-radius:999px;font-weight:600;font-size:.95rem;letter-spacing:.01em;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s,background .3s,color .3s,border-color .3s;white-space:nowrap}
+.btn svg{width:1.2em;height:1.2em}
 .btn:hover{transform:translateY(-3px)}
-.btn-primario{background:var(--primaria);color:#fff;box-shadow:0 12px 30px -10px var(--primaria)}
-.btn-primario:hover{box-shadow:0 18px 36px -10px var(--primaria)}
-.btn-whats{background:#25D366;color:#073b1b}
-.btn-ifood{background:#EA1D2C;color:#fff}
-.btn-borda{border-color:rgba(255,255,255,.55);color:#fff;background:rgba(255,255,255,.06)}
-.btn-borda:hover{background:#fff;color:#111}
-.btn svg{width:20px;height:20px;fill:currentColor;flex:none}
-nav.menu .btn{padding:10px 20px;font-size:.9rem}
+.btn-pri{background:var(--pri);color:var(--pri-tx);box-shadow:0 10px 26px -10px var(--pri)}
+.btn-pri:hover{box-shadow:0 16px 30px -10px var(--pri);filter:brightness(1.08)}
+.btn-wa{background:#1FA855;color:#fff;box-shadow:0 10px 26px -12px #1FA855}
+.btn-wa:hover{filter:brightness(1.08)}
+.btn-line{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+.btn-line:hover{background:#fff;color:#14100E;border-color:#fff}
+.btn-line-d{border:1.5px solid var(--line);color:var(--tx)}
+.btn-line-d:hover{border-color:var(--tx);background:var(--tx);color:var(--bg)}
+.btn-sm{min-height:42px;padding:0 20px;font-size:.88rem}
+
+/* header */
+.hd{position:fixed;inset:0 0 auto;z-index:50;color:#fff;transition:background .35s,box-shadow .35s,color .35s,backdrop-filter .35s}
+.hd .in{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo{font-family:var(--f-t);font-weight:var(--wt);font-size:1.35rem;line-height:1;display:inline-flex;align-items:center;gap:10px}
+.logo::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--acc-l);flex:none}
+.hd nav{display:none}
+.hd nav a{position:relative;font-size:.92rem;font-weight:500;padding:8px 2px;opacity:.9;transition:opacity .2s}
+.hd nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1.5px;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.hd nav a:hover{opacity:1}.hd nav a:hover::after{transform:scaleX(1)}
+.hd .cta{display:none}
+.burger{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid currentColor;opacity:.9}
+.burger svg{width:22px;height:22px}
+.burger path{transition:transform .3s,opacity .3s;transform-origin:center}
+.menu-aberto .burger .m1{transform:translateY(4px) rotate(45deg)}
+.menu-aberto .burger .m2{transform:translateY(-4px) rotate(-45deg)}
+.hd.sc,.menu-aberto .hd{background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);color:var(--tx);box-shadow:0 1px 0 var(--line)}
+.painel{display:none;border-top:1px solid var(--line);background:var(--bg)}
+.menu-aberto .painel{display:block}
+.painel .wrap{display:grid;padding:10px 0 22px}
+.painel a{padding:14px 2px;font-weight:600;border-bottom:1px solid var(--line);color:var(--tx);font-family:var(--f-t);font-size:1.25rem}
+@media(min-width:900px){.hd nav{display:flex;gap:30px}.hd .cta{display:inline-flex}.burger,.painel{display:none!important}}
 
 /* hero */
-.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;color:#fff;padding:140px 0 110px;background:linear-gradient(135deg,var(--fundo),var(--primaria));overflow:hidden}
-.hero-img{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.08);animation:zoomHero 18s ease-out forwards}
-@keyframes zoomHero{to{transform:scale(1)}}
-.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(var(--ov),calc(.82*var(--ovk))) 8%,rgba(var(--ov),calc(.45*var(--ovk))) 55%,rgba(var(--ov),calc(.25*var(--ovk)))),linear-gradient(0deg,var(--fundo) 0%,transparent 28%)}
-.hero .container{position:relative;z-index:2}
-.hero-box{max-width:700px}
-.hero .eyebrow{color:var(--destaque-hero);background:rgba(255,255,255,.1);padding:7px 16px;border-radius:999px;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.2)}
-.hero h1{font-size:clamp(2.6rem,7vw,5.2rem);margin:6px 0 22px;text-wrap:balance}
-.hero p.lead{font-size:clamp(1.05rem,2vw,1.25rem);color:rgba(255,255,255,.88);max-width:560px;margin-bottom:36px}
-.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
-.hero-info{display:flex;flex-wrap:wrap;gap:26px;margin-top:48px;font-size:.92rem;color:rgba(255,255,255,.8)}
-.hero-info b{color:#fff;display:block;font-size:1.05rem}
-.hero-centro .hero-box{max-width:820px;margin-inline:auto;text-align:center}
-.hero-centro .lead{margin-inline:auto}
-.hero-centro .hero-cta,.hero-centro .hero-info{justify-content:center}
-.hero-centro::before{background:radial-gradient(ellipse at center,rgba(var(--ov),calc(.62*var(--ovk))),rgba(var(--ov),calc(.42*var(--ovk))) 70%),linear-gradient(0deg,var(--fundo) 0%,transparent 28%)}
-.scroll-ind{position:absolute;bottom:26px;left:50%;z-index:2;width:26px;height:42px;border:2px solid rgba(255,255,255,.55);border-radius:20px;transform:translateX(-50%)}
-.scroll-ind::after{content:"";position:absolute;top:8px;left:50%;width:4px;height:8px;margin-left:-2px;background:#fff;border-radius:2px;animation:rola 1.8s infinite}
-@keyframes rola{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(16px)}}
+.hero{position:relative;min-height:max(640px,100svh);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:linear-gradient(135deg,color-mix(in srgb,var(--pri) 70%,#000) 0%,#120c0a 100%)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:zoom 22s ease-out both}
+@keyframes zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,6,5,.55) 0%,rgba(10,6,5,.25) 30%,rgba(10,6,5,.82) 100%)}
+.hero.sem-foto::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 80% 20%,color-mix(in srgb,var(--acc) 22%,transparent),transparent 70%)}
+.hero-in{position:relative;padding:130px 0 120px;z-index:2}
+.hero h1{font-size:clamp(3rem,10.5vw,7rem);max-width:13ch;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.hero-sub{margin-top:22px;max-width:540px;font-size:clamp(1.02rem,2.2vw,1.2rem);opacity:.92}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.chips{position:absolute;left:0;right:0;bottom:64px;display:flex;flex-wrap:wrap;gap:10px;z-index:2}
+.chips li{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;padding:7px 14px;border:1px solid rgba(255,255,255,.35);border-radius:999px;background:rgba(0,0,0,.28);backdrop-filter:blur(6px)}
+@media(max-width:899px){.chips{display:none}}
+@media(min-width:900px){.hero{align-items:center}.hero-ov{background:linear-gradient(90deg,rgba(10,6,5,.82) 0%,rgba(10,6,5,.5) 48%,rgba(10,6,5,.12) 100%),linear-gradient(180deg,rgba(10,6,5,.45),transparent 25%,rgba(10,6,5,.5))}.hero-in{padding:120px 0}.hero h1{max-width:11ch}}
 
-/* destaques */
-.destaques{padding:0;margin-top:-56px;z-index:3}
-.dest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.dest{background:var(--fundo2);border:1px solid var(--borda);border-radius:var(--raio);padding:30px 26px;box-shadow:var(--sombra);transition:transform .3s}
-.dest:hover{transform:translateY(-6px)}
-.dest .ico{font-size:2rem;margin-bottom:12px}
-.dest h3{font-size:1.25rem;margin-bottom:8px}
-.dest p{color:var(--suave);font-size:.97rem}
+/* hero split (foto vertical / baixa resolucao) */
+.hero.split{min-height:0;align-items:center;background:linear-gradient(135deg,var(--pri),color-mix(in srgb,var(--pri) 55%,#000))}
+.hero.split::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 85% 20%,color-mix(in srgb,var(--acc) 35%,transparent),transparent 70%)}
+.hero.split .hero-in{display:grid;gap:44px;padding:116px 0 72px;align-items:center}
+.hero.split h1{max-width:none}
+.hero.split .btn-pri,.hero-split .hd:not(.sc) .btn-pri{background:var(--acc);color:var(--acc-tx);box-shadow:0 10px 26px -10px rgba(0,0,0,.5)}
+.hero-fig{position:relative;margin:0 14px 14px 0;z-index:2}
+.hero-fig::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:2px solid var(--acc-l);border-radius:var(--r)}
+.hero-fig img{position:relative;width:100%;aspect-ratio:4/4.2;object-fit:cover;border-radius:var(--r);box-shadow:0 40px 70px -30px rgba(0,0,0,.65)}
+@media(min-width:900px){.hero.split{min-height:max(640px,100svh)}.hero.split .hero-in{grid-template-columns:1.1fr .9fr;gap:80px;padding:120px 0 90px}.hero-fig img{aspect-ratio:4/4.8}}
 
 /* sobre */
-.sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.sobre-img{position:relative}
-.sobre-img img{border-radius:var(--raio);width:100%;aspect-ratio:4/5;object-fit:cover;box-shadow:var(--sombra)}
-.sobre-img::before{content:"";position:absolute;inset:22px -22px -22px 22px;border:2px solid var(--destaque);border-radius:var(--raio);z-index:-1;opacity:.7}
-.sobre-txt p{color:var(--suave);margin-bottom:18px}
-.numeros{display:flex;gap:40px;margin-top:30px;flex-wrap:wrap}
-.numeros div b{font-family:var(--f-titulo);font-size:2.4rem;color:var(--destaque);display:block;line-height:1}
-.numeros div span{font-size:.88rem;color:var(--suave)}
+.sobre{display:grid;gap:44px;align-items:center}
+.sobre.sem{max-width:760px;text-align:center}.sobre.sem .etq{justify-content:center}
+.sobre-foto{position:relative;margin:0 14px 14px 0}
+.sobre-foto::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1.5px solid var(--acc);border-radius:var(--r);z-index:0}
+.sobre-foto img{position:relative;z-index:1;width:100%;aspect-ratio:4/4.4;object-fit:cover;border-radius:var(--r);box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.sobre-txt h2{margin-bottom:22px}
+.sobre-txt p{color:var(--soft);margin-bottom:16px;max-width:56ch}
+.sobre.sem .sobre-txt p{margin-inline:auto}
+.fatos{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.sobre.sem .fatos{justify-content:center}
+.fatos li{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;padding:8px 16px;border:1px solid var(--line);border-radius:999px;color:var(--tx)}
+@media(min-width:900px){.sobre{grid-template-columns:1fr 1.05fr;gap:90px}.sobre.sem{display:block}.sobre-foto img{aspect-ratio:4/4.8}}
 
-/* cardapio */
-#cardapio{background:var(--fundo2)}
-.abas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:38px 0 46px}
-.aba{background:transparent;color:var(--texto);border:1px solid var(--borda);padding:10px 22px;border-radius:var(--raio-btn);cursor:pointer;font-family:var(--f-corpo);font-size:.95rem;font-weight:500;transition:.25s}
-.aba:hover{border-color:var(--destaque)}
-.aba.ativa{background:var(--primaria);border-color:var(--primaria);color:#fff}
-.cat{display:block}
-.js .cat{display:none}
-.js .cat.ativa{display:block;animation:entra .5s ease}
-@keyframes entra{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.cat-nome{display:none}
-.cat-desc{text-align:center;color:var(--suave);margin:-24px auto 34px;max-width:560px}
-.itens{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:22px}
-.item{display:flex;gap:18px;background:var(--fundo);border:1px solid var(--borda);border-radius:var(--raio);padding:14px;transition:transform .3s,box-shadow .3s,border-color .3s;overflow:hidden}
-.item:hover{transform:translateY(-4px);box-shadow:var(--sombra);border-color:color-mix(in srgb,var(--destaque) 60%,transparent)}
-.item-foto{width:116px;height:116px;flex:none;border-radius:14px;object-fit:cover;background:linear-gradient(135deg,var(--primaria),var(--secundaria))}
-.item-corpo{flex:1;display:flex;flex-direction:column;min-width:0}
-.item-topo{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
-.item h3{font-size:1.2rem}
-.preco{font-weight:700;color:var(--destaque);white-space:nowrap;font-size:1.05rem}
-.item p{color:var(--suave);font-size:.92rem;margin-top:6px;line-height:1.5}
-.tag{display:inline-block;margin-top:auto;padding-top:8px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--destaque);font-weight:700}
-.cta-cardapio{text-align:center;margin-top:50px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-
-/* galeria */
-.galeria-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px;margin-top:44px}
-.galeria-grid figure{overflow:hidden;border-radius:var(--raio);background:linear-gradient(135deg,var(--primaria),var(--secundaria))}
-.galeria-grid.g6 figure:nth-child(1){grid-column:span 2;grid-row:span 2}
-.galeria-grid.g6 figure:nth-child(6){grid-column:span 4}
-.galeria-grid.uniforme{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.galeria-grid img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
-.galeria-grid figure:hover img{transform:scale(1.08)}
-
-/* depoimentos */
-#depoimentos{background:var(--fundo2)}
-.dep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:44px}
-.dep{background:var(--fundo);border:1px solid var(--borda);border-radius:var(--raio);padding:30px}
-.dep .estrelas{color:var(--destaque);letter-spacing:3px;margin-bottom:12px}
-.dep p{font-style:italic;margin-bottom:16px;color:var(--texto)}
-.dep span{font-size:.88rem;color:var(--suave);font-weight:600}
-
-/* local */
-.local-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:48px;align-items:stretch}
-.info-list{list-style:none;margin:28px 0}
-.info-list li{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--borda)}
-.info-list li:last-child{border:0}
-.info-list .i{width:42px;height:42px;border-radius:12px;background:var(--primaria);display:grid;place-items:center;flex:none;font-size:1.1rem}
-.info-list b{display:block;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--destaque);margin-bottom:2px}
-.info-list span{color:var(--suave)}
-.mapa{border-radius:var(--raio);overflow:hidden;min-height:420px;border:1px solid var(--borda);box-shadow:var(--sombra);background:var(--fundo2)}
-.mapa iframe{width:100%;height:100%;min-height:420px;border:0;filter:saturate(.9)}
-.local-btns{display:flex;gap:12px;flex-wrap:wrap}
-
-/* cta final */
-.cta-final{background:linear-gradient(135deg,var(--primaria),var(--secundaria));color:#fff;text-align:center;padding:84px 0}
-.cta-final h2{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:14px}
-.cta-final p{opacity:.92;max-width:560px;margin:0 auto 32px}
-.cta-final .hero-cta{justify-content:center}
-
-footer{background:var(--rodape);color:rgba(255,255,255,.65);padding:44px 0 110px;font-size:.9rem}
-footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center}
-footer a:hover{color:#fff}
-footer .redes{display:flex;gap:20px}
-.demo-nota{width:100%;font-size:.78rem;opacity:.7;border-top:1px solid rgba(255,255,255,.12);padding-top:18px}
-
-/* botoes flutuantes */
-.flutuantes{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:70;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
-.fab{display:flex;align-items:center;gap:10px;height:58px;padding:0 22px 0 18px;border-radius:999px;font-weight:700;font-size:.95rem;box-shadow:0 12px 30px -8px rgba(0,0,0,.55);transition:transform .25s}
-.fab:hover{transform:translateY(-3px) scale(1.03)}
-.fab svg{width:28px;height:28px;fill:currentColor}
-.fab-whats{background:#25D366;color:#073b1b;position:relative}
-.fab-whats::after{content:"";position:absolute;inset:0;border-radius:inherit;border:2px solid #25D366;animation:pulso 2.4s infinite}
-@keyframes pulso{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.35,1.5);opacity:0}}
-.fab-ifood{background:#EA1D2C;color:#fff;height:50px}
-.fab-ifood svg{width:22px;height:22px}
-
-/* animacao de scroll */
-.js .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
-.js .reveal.vis{opacity:1;transform:none}
-.js .reveal-l{transform:translateX(-40px)}.js .reveal-r{transform:translateX(40px)}
-
-@media (max-width:900px){
-  section{padding:72px 0}
-  .sobre-grid,.local-grid{grid-template-columns:1fr;gap:40px}
-  .sobre-img::before{display:none}
-  .galeria-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
-  .galeria-grid.g6 figure:nth-child(1){grid-column:span 2;grid-row:span 1}
-  .galeria-grid.g6 figure:nth-child(6){grid-column:span 2}
-  .logo{font-size:1.1rem;white-space:nowrap;max-width:calc(100vw - 100px);overflow:hidden;text-overflow:ellipsis}.logo i{width:30px;height:30px}
-  .burger{display:block}
-  nav.menu{position:fixed;inset:0 0 0 auto;width:min(320px,82vw);background:var(--fundo);flex-direction:column;justify-content:center;gap:26px;transform:translateX(105%);transition:transform .4s;box-shadow:-20px 0 60px rgba(0,0,0,.5);z-index:55}
-  header.topo.aberto nav.menu{transform:none}
-  nav.menu a{color:var(--texto)!important;font-size:1.2rem}
-  header.topo.aberto .burger{z-index:60}
-  header.topo.aberto .burger span::before,header.topo.aberto .burger span::after{background:var(--texto)}
-  .hero{padding:120px 0 100px}
-  .itens{grid-template-columns:1fr}
-  .item-foto{width:96px;height:96px}
-  .fab span.rot{display:none}
-  .fab{padding:0;width:58px;justify-content:center}
-  .fab-ifood{width:50px}
-  .hero-cta .btn{flex:1 1 100%}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .hero-img,.fab-whats::after,.scroll-ind::after{animation:none}
-  .js .reveal{opacity:1;transform:none;transition:none}
+/* categorias */
+.cats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.cat{position:relative;display:block;overflow:hidden;border-radius:var(--r);aspect-ratio:4/5;background:var(--bg2);isolation:isolate}
+.cats .cat:last-child:nth-child(odd){grid-column:1/-1;aspect-ratio:16/9}
+.cat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.cat::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,6,5,.82));z-index:1;transition:opacity .4s}
+.cat:hover img{transform:scale(1.08)}
+.cat-txt{position:absolute;left:18px;right:60px;bottom:16px;z-index:2;color:#fff;display:grid;gap:2px}
+.cat-txt b{font-family:var(--f-t);font-size:clamp(1.25rem,3.4vw,1.7rem);line-height:1.1}
+.cat-txt small{font-size:.8rem;opacity:.85}
+.cat-seta{position:absolute;right:14px;bottom:14px;z-index:2;width:38px;height:38px;border-radius:50%;background:var(--acc);color:var(--acc-tx);display:grid;place-items:center;transition:transform .35s}
+.cat-seta svg{width:18px;height:18px}
+.cat:hover .cat-seta{transform:translateX(4px) rotate(-45deg)}
+@media(max-width:899px){.cats.n2,.cats.n3{grid-template-columns:1fr}.cats.n2 .cat,.cats.n3 .cat,.cats.n3 .cat:last-child:nth-child(odd){aspect-ratio:16/10;grid-column:auto}}
+@media(min-width:900px){
+ .cats{grid-template-columns:repeat(12,1fr);gap:20px}
+ .cat,.cats .cat:last-child:nth-child(odd){grid-column:span var(--sp);aspect-ratio:auto;height:clamp(300px,34vw,420px)}
+ .cats.n2 .cat{height:clamp(300px,30vw,400px)}
 }
 
-/* modo previa */
-body.modo-previa.tem-faixa header.topo{top:var(--fh,34px)}
-body.modo-previa .faixa-demo{font-size:.82rem;padding:8px 16px;box-shadow:0 2px 14px rgba(0,0,0,.35)}
-body.modo-previa .preco:empty{display:none}
-body.modo-previa .item{border-left:3px solid var(--destaque)}
-body.modo-previa .item h3{font-size:1.3rem}
-body.modo-previa #sobre .sobre-txt p:last-of-type{margin-bottom:0}
-.mais-completo{margin:34px auto 0;max-width:640px;text-align:center;border:1.5px dashed color-mix(in srgb,var(--destaque) 65%,transparent);border-radius:var(--raio);padding:22px 24px;background:color-mix(in srgb,var(--destaque) 7%,transparent)}
-.mais-completo b{display:block;font-family:var(--f-titulo);font-size:1.25rem;font-weight:var(--peso-titulo);text-transform:var(--caixa-titulo);letter-spacing:var(--track-titulo);color:var(--texto)}
-.mais-completo span{display:block;color:var(--suave);font-size:.93rem;margin-top:6px}
-.nota-previa{text-align:center;color:var(--suave);font-size:.84rem;margin:26px auto 0;max-width:640px}
-.local-previa .local-grid{grid-template-columns:1fr 1fr;align-items:center}
-.completo-card{border:1.5px dashed var(--borda);border-radius:var(--raio);padding:34px 32px;background:var(--fundo2)}
-.completo-card h3{font-size:1.35rem;margin-bottom:6px}
-.completo-card p{color:var(--suave);font-size:.95rem;margin-bottom:18px}
-.completo-card ul{list-style:none}
-.completo-card li{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:11px 0;border-top:1px solid var(--borda);font-weight:500}
-.completo-card li em{font-style:normal;color:var(--destaque);font-size:.82rem;letter-spacing:.04em}
-.info-list a{color:var(--texto);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--destaque) 60%,transparent);text-underline-offset:3px}
-footer.rodape-previa{padding:34px 0 100px}
-footer.rodape-previa .container{justify-content:center;text-align:center}
-@media (max-width:900px){
-  body.modo-previa.tem-faixa header.topo{top:var(--fh,58px)}
-  .local-previa .local-grid{grid-template-columns:1fr}
-  .completo-card{padding:26px 22px}
-}
-body.cat-unica .abas{margin:0;height:0}body.cat-unica .aba{display:none}body.cat-unica .cat-nome{display:block;text-align:center;font-size:1.5rem;margin:30px 0 28px;color:var(--destaque)}body.cat-unica .cat-desc{margin:-12px auto 28px}
+/* pratos */
+.filtros{display:flex;flex-wrap:wrap;gap:10px;margin:-14px 0 34px}
+.filtros button{padding:10px 20px;border-radius:999px;border:1px solid var(--line);font-size:.88rem;font-weight:600;transition:all .25s}
+.filtros button:hover{border-color:var(--tx)}
+.filtros button.on{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+.pratos{display:grid;gap:22px;grid-template-columns:1fr}
+.prato{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s,border-color .3s}
+.prato:hover{transform:translateY(-6px);box-shadow:0 30px 50px -26px rgba(0,0,0,.55);border-color:color-mix(in srgb,var(--acc) 60%,var(--line))}
+.prato[hidden]{display:none}
+.pratos.um{grid-template-columns:minmax(0,520px);justify-content:center}
+.prato-f{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--bg2)}
+.prato-f img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.prato:hover .prato-f img{transform:scale(1.07)}
+.tag{position:absolute;left:14px;top:14px;z-index:2;background:var(--acc);color:var(--acc-tx);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.prato-t{padding:20px 22px 24px;display:grid;gap:6px;align-content:start}
+.prato-t small{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--acc-t)}
+.prato-t h3{font-size:1.45rem}
+.prato-t p{color:var(--soft);font-size:.95rem}
+.nomes{display:flex;flex-wrap:wrap;gap:10px}.nomes li{padding:10px 18px;border:1px solid var(--line);border-radius:999px;background:var(--card);font-weight:500}
+.tambem{margin-top:34px;color:var(--soft);font-size:.95rem;text-align:center}.tambem b{color:var(--tx)}
+@media(min-width:640px){.pratos{grid-template-columns:repeat(2,1fr)}.pratos:not(.um) .prato:last-child:nth-child(odd){grid-column:1/-1}.pratos:not(.um) .prato:last-child:nth-child(odd) .prato-f{aspect-ratio:21/9}}
+@media(min-width:960px){.pratos{grid-template-columns:repeat(3,1fr);gap:26px}.pratos:not(.um) .prato:last-child:nth-child(odd){grid-column:auto}.pratos:not(.um) .prato:last-child:nth-child(odd) .prato-f{aspect-ratio:4/3}.prato.grande{grid-column:span 2}.prato.grande .prato-f,.pratos:not(.um) .prato.grande:last-child:nth-child(odd) .prato-f{aspect-ratio:auto;flex:1;min-height:260px}}
+
+/* faixa */
+.faixa{position:relative;overflow:hidden;color:#fff;padding:clamp(90px,13vw,170px) 0;background:linear-gradient(120deg,color-mix(in srgb,var(--pri) 85%,#000),color-mix(in srgb,var(--pri) 40%,#0c0807));isolation:isolate}
+.faixa-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.faixa-ov{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(10,6,5,.2),transparent)}
+.faixa.com-foto .faixa-ov{background:linear-gradient(90deg,rgba(10,6,5,.86) 0%,rgba(10,6,5,.6) 55%,rgba(10,6,5,.35) 100%)}
+.faixa-in>*{max-width:700px}
+.faixa:not(.com-foto){padding:clamp(64px,8vw,104px) 0;text-align:center}.faixa:not(.com-foto) .faixa-in>*{margin-inline:auto}.faixa:not(.com-foto) .etq{justify-content:center}.faixa:not(.com-foto) .faixa-in{display:flex;flex-direction:column;align-items:center}.faixa:not(.com-foto) .btn-pri{background:var(--acc);color:var(--acc-tx)}
+.faixa h2{font-size:clamp(2.2rem,6vw,4.2rem)}
+.faixa p{margin-top:18px;font-size:1.1rem;opacity:.92;max-width:48ch}
+.onda{position:absolute;left:0;width:100%;height:clamp(30px,5vw,70px);z-index:0;fill:var(--bg)}
+.onda:not(.b){top:-1px}.onda.b{bottom:-1px;transform:rotate(180deg) scaleX(-1);fill:var(--bg2)}
+.faixa-in{position:relative;z-index:2}
+
+/* contato */
+.contato{display:grid;gap:44px;align-items:center}
+.contato h2{margin-bottom:28px}
+.info{display:grid;gap:22px;margin-bottom:34px}
+.info li{display:flex;gap:16px;align-items:flex-start}
+.info li>svg{width:42px;height:42px;padding:10px;border-radius:50%;background:var(--bg);border:1px solid var(--line);color:var(--acc-t)}
+.info b{display:block;font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);margin-bottom:2px}
+.info span{font-size:1.05rem}
+.info a{border-bottom:1px solid color-mix(in srgb,var(--acc) 60%,transparent);transition:border-color .2s}.info a:hover{border-color:var(--acc)}
+.hor{display:grid;grid-template-columns:auto 1fr;gap:4px 24px}.hor em{font-style:normal;color:var(--soft)}.hor i{font-style:normal;font-weight:600}
+.c-btns{display:flex;flex-wrap:wrap;gap:12px}
+.mapa{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;aspect-ratio:5/4;border-radius:var(--r);overflow:hidden;padding:30px;background:
+ linear-gradient(var(--line) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/48px 48px,
+ radial-gradient(70% 70% at 50% 45%,var(--bg),var(--bg2));border:1px solid var(--line);transition:transform .45s,box-shadow .45s}
+.mapa:hover{transform:translateY(-6px);box-shadow:0 30px 50px -28px rgba(0,0,0,.5)}
+.mapa-pin{width:64px;height:64px;border-radius:50%;background:var(--pri);color:var(--pri-tx);display:grid;place-items:center;margin-bottom:8px;box-shadow:0 0 0 10px color-mix(in srgb,var(--pri) 18%,transparent);animation:pulso 2.6s infinite}
+.mapa-pin svg{width:30px;height:30px}
+@keyframes pulso{50%{box-shadow:0 0 0 20px color-mix(in srgb,var(--pri) 0%,transparent)}}
+.mapa b{font-family:var(--f-t);font-size:1.5rem;line-height:1.15}.mapa small{color:var(--soft);margin-bottom:14px}
+@media(min-width:900px){.contato{grid-template-columns:1fr 1fr;gap:90px}}
+
+/* rodape */
+.rodape{background:var(--ft);color:#EDE5D8;padding:72px 0 0;padding-bottom:0}
+.rod-grid{display:grid;gap:36px;padding-bottom:46px}
+.rod-marca .logo{font-size:1.7rem;color:#fff}.rod-marca p{margin-top:14px;color:#B9AE9E;max-width:34ch}
+.rod-nav{display:grid;gap:10px;align-content:start}
+.rod-nav b{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--acc-l);margin-bottom:4px}
+.rod-nav a{color:#D5CBBB;transition:color .2s;width:fit-content}.rod-nav a:hover{color:#fff}
+.rod-base{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;border-top:1px solid rgba(255,255,255,.12);padding:22px 0 104px;color:#A89E8F;font-size:.84rem}
+.selo-rod{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:3px 12px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+@media(min-width:760px){.rod-grid{grid-template-columns:1.5fr 1fr 1fr}}
+
+/* flutuantes */
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#1FA855;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.5);transition:transform .3s}
+.fab svg{width:30px;height:30px}.fab:hover{transform:scale(1.1) rotate(-6deg)}
+.fab::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #1FA855;animation:onda 2.8s infinite;pointer-events:none}
+@keyframes onda{from{transform:scale(1);opacity:.7}to{transform:scale(1.55);opacity:0}}
+.selo{position:fixed;left:14px;bottom:14px;z-index:60;display:inline-flex;align-items:center;gap:8px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#fff;background:rgba(18,12,10,.78);backdrop-filter:blur(8px);padding:8px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.18);pointer-events:none}
+.selo::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--acc-l)}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .9s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.js .prato.rv.in:hover{transform:translateY(-6px)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+
+/* detalhes por tema */
+.neon .etq,.neon .etq-hero{text-shadow:0 0 14px color-mix(in srgb,var(--acc-l) 70%,transparent)}
+.neon h2 em,.neon .logo::before{text-shadow:none}
+.neon .logo::before{box-shadow:0 0 12px var(--acc-l)}
+.neon .btn-pri{box-shadow:0 0 22px -4px var(--pri)}
+.neon .prato{border-color:color-mix(in srgb,var(--acc) 22%,var(--line))}
+.neon .prato:hover{border-color:var(--acc);box-shadow:0 0 0 1px var(--acc),0 24px 60px -24px var(--acc)}
+.neon .cat-seta,.neon .tag{box-shadow:0 0 16px var(--acc)}
+.neon .mapa-pin{box-shadow:0 0 0 10px color-mix(in srgb,var(--pri) 25%,transparent),0 0 30px var(--pri)}
+.neon .sobre-foto::before,.neon .hero-fig::before{box-shadow:0 0 18px color-mix(in srgb,var(--acc) 60%,transparent)}
+.tema-japones h1,.tema-japones h2{letter-spacing:.01em}
+.tema-japones .sec-alt{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='30' viewBox='0 0 60 30' fill='none' stroke='%23C1121F' stroke-opacity='.07' stroke-width='1.2'%3E%3Ccircle cx='30' cy='30' r='28'/%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3Ccircle cx='30' cy='30' r='12'/%3E%3Ccircle cx='0' cy='0' r='28'/%3E%3Ccircle cx='0' cy='0' r='20'/%3E%3Ccircle cx='0' cy='0' r='12'/%3E%3Ccircle cx='60' cy='0' r='28'/%3E%3Ccircle cx='60' cy='0' r='20'/%3E%3Ccircle cx='60' cy='0' r='12'/%3E%3C/svg%3E")}
+.tema-steakhouse h1,.tema-steakhouse h2{font-weight:600}
+.tema-steakhouse .etq,.tema-steakhouse .prato-t small{letter-spacing:.28em}
+.tema-steakhouse .btn{border-radius:4px}
+.tema-pizzaria .btn,.tema-cafe .btn{box-shadow:none}
+.tema-cafe h1{font-weight:400}
+.tema-cafe h2,.tema-cafe h3,.tema-cafe .logo{font-weight:400}
 </style>
 </head>
-<body class="tem-faixa modo-previa cat-unica">
-<div class="faixa-demo">Prévia — versão inicial do site do It Burger. A versão completa é finalizada após a aprovação</div>
-<header class="topo" id="topo">
-  <div class="container">
-    <a href="#inicio" class="logo"><i>I</i>It Burger</a>
-    <button class="burger" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
-    <nav class="menu">
-      <a href="#cardapio">Cardápio</a>
-      <a href="#sobre">Sobre</a>
-      
-      <a href="#local">Contato</a>
-      <a class="btn btn-primario" href="https://wa.me/551126492418?text=Ol%C3%A1%21+Vim+pelo+site+do+It+Burger+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener">WhatsApp</a>
-    </nav>
-  </div>
-</header>
-
+<body class="tema-hamburgueria escuro hero-split">
+<script>document.documentElement.classList.add('js')</script>
+<a class="pulo" href="#sobre">Pular para o conteúdo</a>
+<header class="hd" id="hd"><div class="wrap in"><a class="logo" href="#topo">It Burger</a><nav aria-label="Principal"><a href="#sobre">Sobre</a><a href="#categorias">Categorias</a><a href="#pratos">Pratos populares</a><a href="#contato">Contato</a></nav><a class="btn btn-pri btn-sm cta" href="https://wa.me/551126492418?text=Ol%C3%A1%21+Vim+pelo+site+do+It+Burger+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg><span>WhatsApp</span></a><button class="burger" id="bg" aria-label="Abrir menu" aria-expanded="false" aria-controls="painel"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="m1" d="M4 8h16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path class="m2" d="M4 16h16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></button></div><div class="painel" id="painel"><nav class="wrap" aria-label="Menu"><a href="#sobre">Sobre</a><a href="#categorias">Categorias</a><a href="#pratos">Pratos populares</a><a href="#contato">Contato</a></nav></div></header>
 <main>
-<section class="hero " id="inicio">
-  <div class="hero-img" style="background-image:url('https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');background-position:center"></div>
-  <div class="container">
-    <div class="hero-box">
-      <span class="eyebrow reveal">Hamburgueria · Tatuapé</span>
-      <h1 class="reveal" style="--d:.1s">It Burger</h1>
-      <p class="lead reveal" style="--d:.2s">Hambúrguer com cheddar, tapioca stickers, porções e chopp, no Tatuapé.</p>
-      <div class="hero-cta reveal" style="--d:.3s">
-        <a class="btn btn-whats" href="https://wa.me/551126492418?text=Ol%C3%A1%21+Vim+pelo+site+do+It+Burger+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Chamar no WhatsApp</a><a class="btn btn-borda" href="#cardapio">Ver sugestão de cardápio</a>
-      </div>
-      <div class="hero-info reveal" style="--d:.4s">
-        <div><b>Tatuapé</b>São Paulo</div>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-ind" aria-hidden="true"></div>
-</section>
-
-
-
-<section id="sobre">
-  <div class="container sobre-grid">
-    <div class="sobre-img reveal reveal-l"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Ambiente do It Burger" loading="lazy"></div>
-    <div class="sobre-txt reveal reveal-r">
-      <span class="eyebrow">Sobre</span>
-      <h2 class="section-title">Conheça It Burger</h2>
-      <p>A It Burger é uma hamburgueria no Tatuapé, em São Paulo, com hambúrguer com cheddar, tapioca stickers, porções, chopp Heineken e refrigerante com refil.</p><p>Esta prévia mostra como o site pode ficar: cardápio, contato e WhatsApp em um só lugar.</p>
-      
-    </div>
-  </div>
-</section>
-
-<section id="cardapio">
-  <div class="container">
-    <div class="center reveal">
-      <span class="eyebrow">Sugestão de cardápio</span>
-      <h2 class="section-title">Uma amostra do cardápio</h2>
-      <p class="section-sub">Seleção inicial com pratos citados publicamente sobre o restaurante. Descrições, fotos e preços finais entram no site completo.</p>
-    </div>
-    <div class="abas reveal" role="tablist"><button class="aba" role="tab" data-alvo="cat-0-hamburgueres-e-porcoes" aria-selected="false">Hambúrgueres e porções</button></div>
-    <div class="cat" id="cat-0-hamburgueres-e-porcoes"><h3 class="cat-nome">Hambúrgueres e porções</h3><div class="itens"><article class="item"><div class="item-corpo"><div class="item-topo"><h3>Hambúrguer com cheddar</h3><span class="preco"></span></div><p></p></div></article><article class="item"><div class="item-corpo"><div class="item-topo"><h3>Tapioca stickers</h3><span class="preco"></span></div><p></p></div></article><article class="item"><div class="item-corpo"><div class="item-topo"><h3>Porções</h3><span class="preco"></span></div><p></p></div></article></div></div><div class="mais-completo reveal"><b>Mais itens no site completo</b><span>Bebidas (no site completo)</span></div><p class="nota-previa">Fotos ilustrativas de banco de imagens: as fotos reais do restaurante entram no site completo.</p>
-    <div class="cta-cardapio reveal"><a class="btn btn-whats" href="https://wa.me/551126492418?text=Ol%C3%A1%21+Vim+pelo+site+do+It+Burger+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Pedir pelo WhatsApp</a></div>
-  </div>
-</section>
-
-
-
-
-<section id="local" class="local-previa"><div class="container local-grid"><div class="reveal reveal-l"><span class="eyebrow">Contato</span><h2 class="section-title">Entre em contato</h2><ul class="info-list"><li><div class="i">📍</div><div><b>Região</b><span>Tatuapé, São Paulo<br>Endereço e horários (no site completo)</span></div></li><li><div class="i">📞</div><div><b>Telefone / WhatsApp</b><span><a href="tel:+551126492418">(11) 2649-2418</a></span></div></li></ul><div class="local-btns"><a class="btn btn-whats" href="https://wa.me/551126492418?text=Ol%C3%A1%21+Vim+pelo+site+do+It+Burger+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Chamar no WhatsApp</a><a class="btn btn-primario" href="https://www.google.com/maps/search/It%20Burger%20Tatuap%C3%A9%20S%C3%A3o%20Paulo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>Abrir no Google Maps</a></div></div><div class="completo-card reveal reveal-r"><h3>Reservado para o site completo</h3><p>A versão completa é finalizada após a aprovação desta prévia.</p><ul><li><span>Galeria de fotos reais</span><em>(no site completo)</em></li><li><span>Cardápio completo, com fotos</span><em>(no site completo)</em></li><li><span>Mapa interativo e horários</span><em>(no site completo)</em></li><li><span>Avaliações de clientes</span><em>(no site completo)</em></li><li><span>Botões de pedido e integrações</span><em>(no site completo)</em></li></ul></div></div></section>
-
-
+<section class="hero split" id="topo"><div class="wrap hero-in"><div class="hero-txt"><span class="etq etq-hero">Hamburgueria · Tatuapé</span><h1>It Burger</h1><p class="hero-sub">Hambúrguer artesanal, acompanhamentos, sobremesas e milkshake, no Tatuapé.</p><div class="hero-btns"><a class="btn btn-pri" href="https://wa.me/551126492418?text=Ol%C3%A1%21+Vim+pelo+site+do+It+Burger+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg><span>Chamar no WhatsApp</span></a><a class="btn btn-line" href="#pratos"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg><span>Ver pratos</span></a></div></div><figure class="hero-fig"><img src="fotos-it-burger-01.jpg" srcset="fotos-it-burger-01-m.jpg 720w, fotos-it-burger-01.jpg 1080w" sizes="(min-width:900px) 40vw, 92vw" width="1080" height="1920" alt="It Burger: foto principal" decoding="async" fetchpriority="high" style="object-position:center 40%"></figure></div></section>
+<section class="sec" id="sobre"><div class="wrap sobre"><figure class="sobre-foto rv"><img src="fotos-it-burger-07.jpg" srcset="fotos-it-burger-07-m.jpg 720w, fotos-it-burger-07.jpg 1400w" sizes="(min-width:900px) 46vw, 92vw" width="1400" height="788" alt="It Burger: sobre" decoding="async" loading="lazy" style="object-position:center 55%"></figure><div class="sobre-txt rv" style="--d:.12s"><span class="etq">Sobre</span><h2>Conheça o It Burger</h2><p>O It Burger é uma hamburgueria moderna e familiar no Tatuapé, em São Paulo, especializada em hambúrgueres e acompanhamentos.</p><p>Nesta prévia você vê como o site pode ficar: cardápio, contato e WhatsApp em um só lugar.</p><ul class="fatos"><li>Hamburgueria</li><li>Tatuapé, São Paulo</li></ul></div></div></section>
+<section class="sec sec-alt" id="categorias"><div class="wrap"><header class="sec-h rv"><span class="etq">Cardápio</span><h2>Escolha por categoria</h2></header><div class="cats n3"><a class="cat rv" href="#pratos" data-cat="0" style="--sp:4;--d:0.00s"><img src="fotos-it-burger-01.jpg" srcset="fotos-it-burger-01-m.jpg 720w, fotos-it-burger-01.jpg 1080w" sizes="(min-width:900px) 33vw, 50vw" width="1080" height="1920" alt="Hambúrgueres e porções" decoding="async" loading="lazy" style="object-position:center 40%"><span class="cat-txt"><b>Hambúrgueres e porções</b><small>3 sugestões</small></span><i class="cat-seta"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></i></a><a class="cat rv" href="#pratos" data-cat="1" style="--sp:4;--d:0.07s"><img src="fotos-it-burger-05.jpg" srcset="fotos-it-burger-05-m.jpg 720w, fotos-it-burger-05.jpg 1400w" sizes="(min-width:900px) 33vw, 50vw" width="1400" height="1866" alt="Sobremesas" decoding="async" loading="lazy" style="object-position:center 45%"><span class="cat-txt"><b>Sobremesas</b><small>3 sugestões</small></span><i class="cat-seta"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></i></a><a class="cat rv" href="#pratos" data-cat="2" style="--sp:4;--d:0.14s"><img src="fotos-it-burger-08.jpg" srcset="fotos-it-burger-08-m.jpg 720w, fotos-it-burger-08.jpg 1400w" sizes="(min-width:900px) 33vw, 50vw" width="1400" height="2488" alt="Para beber" decoding="async" loading="lazy" style="object-position:center 55%"><span class="cat-txt"><b>Para beber</b><small>2 sugestões</small></span><i class="cat-seta"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></div></div></section>
+<section class="sec" id="pratos"><div class="wrap"><header class="sec-h rv"><span class="etq">Seleção da casa</span><h2>Do cardápio</h2></header><div class="filtros rv" role="group" aria-label="Filtrar por categoria"><button class="on" data-f="*" aria-pressed="true">Todos</button><button data-f="0" aria-pressed="false">Hambúrgueres e porções</button><button data-f="1" aria-pressed="false">Sobremesas</button><button data-f="2" aria-pressed="false">Para beber</button></div><div class="pratos"><article class="prato rv" data-cat="0" style="--d:0.00s"><div class="prato-f"><img src="fotos-it-burger-01.jpg" srcset="fotos-it-burger-01-m.jpg 720w, fotos-it-burger-01.jpg 1080w" sizes="(min-width:900px) 33vw, (min-width:600px) 50vw, 92vw" width="1080" height="1920" alt="Hambúrguer artesanal" decoding="async" loading="lazy" style="object-position:center 40%"><span class="tag">Clássico</span></div><div class="prato-t"><small>Hambúrgueres e porções</small><h3>Hambúrguer artesanal</h3><p>Servido com batata frita em cesta.</p></div></article><article class="prato rv" data-cat="0" style="--d:0.08s"><div class="prato-f"><img src="fotos-it-burger-04.jpg" srcset="fotos-it-burger-04-m.jpg 720w, fotos-it-burger-04.jpg 1400w" sizes="(min-width:900px) 33vw, (min-width:600px) 50vw, 92vw" width="1400" height="1400" alt="Palitos de mozzarella" decoding="async" loading="lazy" style="object-position:center 50%"></div><div class="prato-t"><small>Hambúrgueres e porções</small><h3>Palitos de mozzarella</h3><p>Empanados, com molho.</p></div></article><article class="prato rv" data-cat="1" style="--d:0.16s"><div class="prato-f"><img src="fotos-it-burger-05.jpg" srcset="fotos-it-burger-05-m.jpg 720w, fotos-it-burger-05.jpg 1400w" sizes="(min-width:900px) 33vw, (min-width:600px) 50vw, 92vw" width="1400" height="1866" alt="Brownie" decoding="async" loading="lazy" style="object-position:center 45%"></div><div class="prato-t"><small>Sobremesas</small><h3>Brownie</h3><p>Com sorvete, chantilly e calda de chocolate.</p></div></article><article class="prato rv" data-cat="1" style="--d:0.00s"><div class="prato-f"><img src="fotos-it-burger-02.jpg" srcset="fotos-it-burger-02-m.jpg 720w, fotos-it-burger-02.jpg 1400w" sizes="(min-width:900px) 33vw, (min-width:600px) 50vw, 92vw" width="1400" height="1866" alt="Parfait" decoding="async" loading="lazy" style="object-position:center 40%"></div><div class="prato-t"><small>Sobremesas</small><h3>Parfait</h3><p>Em copo, com chantilly, calda e frutas vermelhas.</p></div></article><article class="prato rv" data-cat="1" style="--d:0.08s"><div class="prato-f"><img src="fotos-it-burger-03.jpg" srcset="fotos-it-burger-03-m.jpg 720w, fotos-it-burger-03.jpg 1400w" sizes="(min-width:900px) 33vw, (min-width:600px) 50vw, 92vw" width="1400" height="1866" alt="Taça de sundae" decoding="async" loading="lazy" style="object-position:center 40%"></div><div class="prato-t"><small>Sobremesas</small><h3>Taça de sundae</h3><p>Com banana, morango e sorvete.</p></div></article><article class="prato rv" data-cat="2" style="--d:0.16s"><div class="prato-f"><img src="fotos-it-burger-08.jpg" srcset="fotos-it-burger-08-m.jpg 720w, fotos-it-burger-08.jpg 1400w" sizes="(min-width:900px) 33vw, (min-width:600px) 50vw, 92vw" width="1400" height="2488" alt="Milkshake" decoding="async" loading="lazy" style="object-position:center 55%"></div><div class="prato-t"><small>Para beber</small><h3>Milkshake</h3><p>Com cereja.</p></div></article></div><p class="tambem rv"><b>Também no cardápio:</b> Batata frita · Heineken</p></div></section>
+<section class="faixa com-foto" id="destaque" aria-label="Destaque"><img class="faixa-img" src="fotos-it-burger-06c.jpg" srcset="fotos-it-burger-06c-m.jpg 720w, fotos-it-burger-06c.jpg 1344w" sizes="100vw" width="1344" height="901" alt="" decoding="async" loading="lazy" style="object-position:center 55%"><div class="faixa-ov"></div><div class="wrap faixa-in rv"><span class="etq etq-hero">Hambúrguer · Fritas</span><h2>Hambúrguer com batata frita</h2><p>Peça pelo WhatsApp ou venha conhecer a casa.</p><div class="hero-btns"><a class="btn btn-pri" href="https://wa.me/551126492418?text=Ol%C3%A1%21+Vim+pelo+site+do+It+Burger+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg><span>Pedir pelo WhatsApp</span></a></div></div></section>
+<section class="sec sec-alt" id="contato"><div class="wrap contato"><div class="rv"><span class="etq">Contato</span><h2>Venha nos visitar</h2><ul class="info"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/></svg><div><b>Endereço</b><span>R. Fernandes Pinheiro, 51 - Tatuapé<br>Tatuapé, São Paulo</span></div></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M5 4h3.5l1.6 4-2 1.3a11 11 0 0 0 5.6 5.6l1.3-2 4 1.6V18a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><div><b>Telefone / WhatsApp</b><span><a href="tel:+551126492418">(11) 2649-2418</a></span></div></li></ul><div class="c-btns"><a class="btn btn-wa" href="https://wa.me/551126492418?text=Ol%C3%A1%21+Vim+pelo+site+do+It+Burger+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg><span>Chamar no WhatsApp</span></a><a class="btn btn-line-d" href="https://www.google.com/maps/search/It%20Burger%20Tatuap%C3%A9%20S%C3%A3o%20Paulo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/></svg><span>Abrir no Google Maps</span></a></div></div><a class="mapa rv" style="--d:.12s" href="https://www.google.com/maps/search/It%20Burger%20Tatuap%C3%A9%20S%C3%A3o%20Paulo" target="_blank" rel="noopener" aria-label="Abrir It Burger no Google Maps"><span class="mapa-pin"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span><b>It Burger</b><small>Tatuapé, São Paulo</small><span class="btn btn-pri btn-sm"><span>Ver no Google Maps</span></span></a></div></section>
 </main>
-
-<footer class="rodape-previa"><div class="container"><div>It Burger · Tatuapé, São Paulo · prévia do site</div><div class="redes"><a href="https://www.google.com/maps/search/It%20Burger%20Tatuap%C3%A9%20S%C3%A3o%20Paulo" target="_blank" rel="noopener">Google Maps</a></div><div class="demo-nota">Prévia criada por Nicolas Rivera. Fotos ilustrativas de banco de imagens; textos e cardápio são sugestões e serão ajustados com você. Não é o site final.</div></div></footer>
-
-<div class="flutuantes">
-  
-  <a class="fab fab-whats" href="https://wa.me/551126492418?text=Ol%C3%A1%21+Vim+pelo+site+do+It+Burger+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg><span class="rot">WhatsApp</span></a>
-</div>
-
+<footer class="rodape"><div class="wrap rod-grid"><div class="rod-marca"><a class="logo" href="#topo">It Burger</a><p>Hamburgueria · Tatuapé, São Paulo</p></div><nav class="rod-nav" aria-label="Rodapé"><b>Navegação</b><a href="#sobre">Sobre</a><a href="#categorias">Categorias</a><a href="#pratos">Pratos populares</a><a href="#contato">Contato</a></nav><div class="rod-nav"><b>Contato</b><a href="https://wa.me/551126492418?text=Ol%C3%A1%21+Vim+pelo+site+do+It+Burger+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener">WhatsApp</a><a href="tel:+551126492418">(11) 2649-2418</a><a href="https://www.google.com/maps/search/It%20Burger%20Tatuap%C3%A9%20S%C3%A3o%20Paulo" target="_blank" rel="noopener">Google Maps</a></div></div><div class="wrap rod-base"><span class="selo-rod">Prévia do site</span><span>Prévia criada por Nicolas Rivera. Fotos e textos são sugestões e serão ajustados com você. Não é o site final.</span></div></footer>
+<a class="fab" href="https://wa.me/551126492418?text=Ol%C3%A1%21+Vim+pelo+site+do+It+Burger+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></a>
+<div class="selo" role="note">Prévia do site</div>
 <script>
-document.documentElement.classList.add('js');
 (function(){
-  var topo=document.getElementById('topo');
-  function onScroll(){topo.classList.toggle('rolou',window.scrollY>40)}
-  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-
-  var burger=document.querySelector('.burger');
-  burger.addEventListener('click',function(){
-    var a=topo.classList.toggle('aberto');burger.setAttribute('aria-expanded',a);
-  });
-  document.querySelectorAll('nav.menu a').forEach(function(l){l.addEventListener('click',function(){topo.classList.remove('aberto');burger.setAttribute('aria-expanded','false')})});
-
-  var abas=document.querySelectorAll('.aba'),cats=document.querySelectorAll('.cat');
-  abas.forEach(function(b){b.addEventListener('click',function(){
-    abas.forEach(function(x){x.classList.remove('ativa');x.setAttribute('aria-selected','false')});
-    cats.forEach(function(c){c.classList.remove('ativa')});
-    b.classList.add('ativa');b.setAttribute('aria-selected','true');
-    var alvo=document.getElementById(b.dataset.alvo);if(alvo){alvo.classList.add('ativa')}
-  })});
-  if(abas[0]){abas[0].click()}
-
-  var els=document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-    els.forEach(function(e){io.observe(e)});
-  }else{els.forEach(function(e){e.classList.add('vis')})}
+var d=document,hd=d.getElementById('hd'),b=d.body;
+function sc(){hd.classList.toggle('sc',window.scrollY>40)}sc();window.addEventListener('scroll',sc,{passive:true});
+var bg=d.getElementById('bg');
+function menu(a){b.classList.toggle('menu-aberto',a);bg.setAttribute('aria-expanded',a);bg.setAttribute('aria-label',a?'Fechar menu':'Abrir menu')}
+bg.addEventListener('click',function(){menu(!b.classList.contains('menu-aberto'))});
+d.querySelectorAll('#painel a').forEach(function(a){a.addEventListener('click',function(){menu(false)})});
+d.addEventListener('keydown',function(e){if(e.key==='Escape')menu(false)});
+var rv=d.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});rv.forEach(function(e){io.observe(e)})}else{rv.forEach(function(e){e.classList.add('in')})}
+var fb=d.querySelectorAll('.filtros button'),ps=d.querySelectorAll('.prato');
+function grandes(n){if(n<2||n%3===0)return[];return(3-n%3)%3===1?[0]:[0,2+3*Math.floor((n-4)/3)]}
+function filtrar(f){var vis=[];ps.forEach(function(p){var ok=f==='*'||p.dataset.cat===f;p.hidden=!ok;p.classList.remove('grande');if(ok)vis.push(p)});grandes(vis.length).forEach(function(i){if(vis[i])vis[i].classList.add('grande')});var pc=d.querySelector('.pratos');if(pc)pc.classList.toggle('um',vis.length===1);
+ fb.forEach(function(x){var on=x.dataset.f===f;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on)})}
+fb.forEach(function(x){x.addEventListener('click',function(){filtrar(x.dataset.f)})});
+d.querySelectorAll('.cat').forEach(function(c){c.addEventListener('click',function(){var f=c.dataset.cat;if(fb.length&&d.querySelector('.filtros button[data-f="'+f+'"]'))filtrar(f)})});
 })();
-(function(){var f=document.querySelector('.faixa-demo');if(!f)return;function s(){document.documentElement.style.setProperty('--fh',f.offsetHeight+'px')}s();window.addEventListener('resize',s);window.addEventListener('load',s);if(window.ResizeObserver){new ResizeObserver(s).observe(f)}if(document.fonts&&document.fonts.ready){document.fonts.ready.then(s)}})();
 </script>
 </body>
 </html>
