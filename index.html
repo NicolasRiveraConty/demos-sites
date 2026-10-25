@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Forno Nobre (EXEMPLO) | Pizzaria artesanal em São Paulo</title>
+<meta name="description" content="Forno Nobre (EXEMPLO) - Pizzaria artesanal em Vila Madalena, São Paulo. Veja o cardápio e peça pelo WhatsApp ou iFood.">
+<meta name="theme-color" content="#110E0C">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Forno Nobre (EXEMPLO) | Pizzaria artesanal em São Paulo">
+<meta property="og:description" content="Forno Nobre (EXEMPLO) - Pizzaria artesanal em Vila Madalena, São Paulo. Veja o cardápio e peça pelo WhatsApp ou iFood.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?auto=format&amp;fit=crop&amp;w=2000&amp;q=75">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Forno Nobre (EXEMPLO)", "servesCuisine": "Pizzaria artesanal", "address": {"@type": "PostalAddress", "streetAddress": "Rua Exemplo, 123 (endereço fictício)", "addressLocality": "São Paulo"}, "hasMenu": "#cardapio", "telephone": "(11) 90000-0000", "image": "https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?auto=format&fit=crop&w=2000&q=75"}</script>
+<style>
+:root{
+  --primaria:#C0392B;
+  --secundaria:#5B1A12;
+  --destaque:#F2B84B;
+  --fundo:#110E0C;
+  --fundo2:#1F1C19;
+  --texto:#F6EFE5;
+  --suave:#ADA7A0;
+  --borda:rgba(246,239,229,.13);
+  --f-titulo:'Playfair Display', Georgia, serif;
+  --f-corpo:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --raio:18px;
+  --sombra:0 18px 50px -18px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--f-corpo);background:var(--fundo);color:var(--texto);line-height:1.65;font-size:17px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--f-titulo);line-height:1.15;font-weight:700;letter-spacing:-.01em}
+.container{width:min(1160px,100% - 40px);margin-inline:auto}
+section{padding:96px 0;position:relative}
+.eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--destaque);font-weight:600;margin-bottom:14px}
+.section-title{font-size:clamp(2rem,4.4vw,3.2rem);margin-bottom:16px}
+.section-sub{color:var(--suave);max-width:620px;font-size:1.05rem}
+.center{text-align:center}.center .section-sub{margin-inline:auto}
+
+/* faixa demo */
+.faixa-demo{background:var(--destaque);color:#111;font-size:.8rem;font-weight:600;text-align:center;padding:7px 14px;line-height:1.3;letter-spacing:.02em;position:fixed;top:0;left:0;right:0;z-index:80}
+body.tem-faixa header.topo{top:32px}
+body.tem-faixa .hero{padding-top:170px}
+
+/* header */
+header.topo{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .35s,box-shadow .35s,padding .35s,transform .35s;padding:20px 0}
+header.topo::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .35s;background:color-mix(in srgb,var(--fundo) 86%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--borda)}
+header.topo.rolou::before{opacity:1}
+header.topo.rolou{padding:12px 0}
+.topo .container{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:var(--f-titulo);font-size:1.45rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:10px}
+header.topo.rolou .logo{color:var(--texto)}
+.logo i{width:34px;height:34px;border-radius:50%;background:var(--primaria);display:grid;place-items:center;font-style:normal;font-size:1rem;color:#fff}
+nav.menu{display:flex;gap:30px;align-items:center}
+nav.menu a{font-size:.95rem;color:rgba(255,255,255,.88);position:relative;padding:4px 0;transition:color .2s}
+header.topo.rolou nav.menu a{color:var(--texto)}
+nav.menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--destaque);transition:width .3s}
+nav.menu a:not(.btn):hover::after{width:100%}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;position:relative}
+.burger span,.burger span::before,.burger span::after{content:"";position:absolute;left:10px;right:10px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+.burger span{top:21px}.burger span::before{top:-7px;left:0;right:0}.burger span::after{top:7px;left:0;right:0}
+header.topo.rolou .burger span,header.topo.rolou .burger span::before,header.topo.rolou .burger span::after{background:var(--texto)}
+header.topo.aberto .burger span{background:transparent!important}
+header.topo.aberto .burger span::before{top:0;transform:rotate(45deg)}
+header.topo.aberto .burger span::after{top:0;transform:rotate(-45deg)}
+
+/* botoes */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;border-radius:999px;font-weight:600;font-size:1rem;border:2px solid transparent;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s,color .25s;font-family:var(--f-corpo)}
+.btn:hover{transform:translateY(-3px)}
+.btn-primario{background:var(--primaria);color:#fff;box-shadow:0 12px 30px -10px var(--primaria)}
+.btn-primario:hover{box-shadow:0 18px 36px -10px var(--primaria)}
+.btn-whats{background:#25D366;color:#073b1b}
+.btn-ifood{background:#EA1D2C;color:#fff}
+.btn-borda{border-color:rgba(255,255,255,.55);color:#fff;background:rgba(255,255,255,.06)}
+.btn-borda:hover{background:#fff;color:#111}
+.btn svg{width:20px;height:20px;fill:currentColor;flex:none}
+nav.menu .btn{padding:10px 20px;font-size:.9rem}
+
+/* hero */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;color:#fff;padding:140px 0 110px;background:linear-gradient(135deg,var(--fundo),var(--primaria));overflow:hidden}
+.hero-img{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.08);animation:zoomHero 18s ease-out forwards}
+@keyframes zoomHero{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(0,0,0,.82) 8%,rgba(0,0,0,.45) 55%,rgba(0,0,0,.25)),linear-gradient(0deg,var(--fundo) 0%,transparent 28%)}
+.hero .container{position:relative;z-index:2}
+.hero-box{max-width:700px}
+.hero .eyebrow{color:var(--destaque);background:rgba(255,255,255,.1);padding:7px 16px;border-radius:999px;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.2)}
+.hero h1{font-size:clamp(2.6rem,7vw,5.2rem);margin:6px 0 22px;text-wrap:balance}
+.hero p.lead{font-size:clamp(1.05rem,2vw,1.25rem);color:rgba(255,255,255,.88);max-width:560px;margin-bottom:36px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-info{display:flex;flex-wrap:wrap;gap:26px;margin-top:48px;font-size:.92rem;color:rgba(255,255,255,.8)}
+.hero-info b{color:#fff;display:block;font-size:1.05rem}
+.scroll-ind{position:absolute;bottom:26px;left:50%;z-index:2;width:26px;height:42px;border:2px solid rgba(255,255,255,.55);border-radius:20px;transform:translateX(-50%)}
+.scroll-ind::after{content:"";position:absolute;top:8px;left:50%;width:4px;height:8px;margin-left:-2px;background:#fff;border-radius:2px;animation:rola 1.8s infinite}
+@keyframes rola{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(16px)}}
+
+/* destaques */
+.destaques{padding:0;margin-top:-56px;z-index:3}
+.dest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.dest{background:var(--fundo2);border:1px solid var(--borda);border-radius:var(--raio);padding:30px 26px;box-shadow:var(--sombra);transition:transform .3s}
+.dest:hover{transform:translateY(-6px)}
+.dest .ico{font-size:2rem;margin-bottom:12px}
+.dest h3{font-size:1.25rem;margin-bottom:8px}
+.dest p{color:var(--suave);font-size:.97rem}
+
+/* sobre */
+.sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.sobre-img{position:relative}
+.sobre-img img{border-radius:var(--raio);width:100%;aspect-ratio:4/5;object-fit:cover;box-shadow:var(--sombra)}
+.sobre-img::before{content:"";position:absolute;inset:22px -22px -22px 22px;border:2px solid var(--destaque);border-radius:var(--raio);z-index:-1;opacity:.7}
+.sobre-txt p{color:var(--suave);margin-bottom:18px}
+.numeros{display:flex;gap:40px;margin-top:30px;flex-wrap:wrap}
+.numeros div b{font-family:var(--f-titulo);font-size:2.4rem;color:var(--destaque);display:block;line-height:1}
+.numeros div span{font-size:.88rem;color:var(--suave)}
+
+/* cardapio */
+#cardapio{background:var(--fundo2)}
+.abas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:38px 0 46px}
+.aba{background:transparent;color:var(--texto);border:1px solid var(--borda);padding:10px 22px;border-radius:999px;cursor:pointer;font-family:var(--f-corpo);font-size:.95rem;font-weight:500;transition:.25s}
+.aba:hover{border-color:var(--destaque)}
+.aba.ativa{background:var(--primaria);border-color:var(--primaria);color:#fff}
+.cat{display:block}
+.js .cat{display:none}
+.js .cat.ativa{display:block;animation:entra .5s ease}
+@keyframes entra{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.cat-nome{display:none}
+.cat-desc{text-align:center;color:var(--suave);margin:-24px auto 34px;max-width:560px}
+.itens{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:22px}
+.item{display:flex;gap:18px;background:var(--fundo);border:1px solid var(--borda);border-radius:var(--raio);padding:14px;transition:transform .3s,box-shadow .3s,border-color .3s;overflow:hidden}
+.item:hover{transform:translateY(-4px);box-shadow:var(--sombra);border-color:color-mix(in srgb,var(--destaque) 60%,transparent)}
+.item-foto{width:116px;height:116px;flex:none;border-radius:14px;object-fit:cover;background:linear-gradient(135deg,var(--primaria),var(--secundaria))}
+.item-corpo{flex:1;display:flex;flex-direction:column;min-width:0}
+.item-topo{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.item h3{font-size:1.2rem}
+.preco{font-weight:700;color:var(--destaque);white-space:nowrap;font-size:1.05rem}
+.item p{color:var(--suave);font-size:.92rem;margin-top:6px;line-height:1.5}
+.tag{display:inline-block;margin-top:auto;padding-top:8px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--destaque);font-weight:700}
+.cta-cardapio{text-align:center;margin-top:50px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* galeria */
+.galeria-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px;margin-top:44px}
+.galeria-grid figure{overflow:hidden;border-radius:var(--raio);background:linear-gradient(135deg,var(--primaria),var(--secundaria))}
+.galeria-grid.g6 figure:nth-child(1){grid-column:span 2;grid-row:span 2}
+.galeria-grid.g6 figure:nth-child(6){grid-column:span 4}
+.galeria-grid.uniforme{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.galeria-grid img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.galeria-grid figure:hover img{transform:scale(1.08)}
+
+/* depoimentos */
+#depoimentos{background:var(--fundo2)}
+.dep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:44px}
+.dep{background:var(--fundo);border:1px solid var(--borda);border-radius:var(--raio);padding:30px}
+.dep .estrelas{color:var(--destaque);letter-spacing:3px;margin-bottom:12px}
+.dep p{font-style:italic;margin-bottom:16px;color:var(--texto)}
+.dep span{font-size:.88rem;color:var(--suave);font-weight:600}
+
+/* local */
+.local-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:48px;align-items:stretch}
+.info-list{list-style:none;margin:28px 0}
+.info-list li{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--borda)}
+.info-list li:last-child{border:0}
+.info-list .i{width:42px;height:42px;border-radius:12px;background:var(--primaria);display:grid;place-items:center;flex:none;font-size:1.1rem}
+.info-list b{display:block;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--destaque);margin-bottom:2px}
+.info-list span{color:var(--suave)}
+.mapa{border-radius:var(--raio);overflow:hidden;min-height:420px;border:1px solid var(--borda);box-shadow:var(--sombra);background:var(--fundo2)}
+.mapa iframe{width:100%;height:100%;min-height:420px;border:0;filter:saturate(.9)}
+.local-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* cta final */
+.cta-final{background:linear-gradient(135deg,var(--primaria),var(--secundaria));color:#fff;text-align:center;padding:84px 0}
+.cta-final h2{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:14px}
+.cta-final p{opacity:.92;max-width:560px;margin:0 auto 32px}
+.cta-final .hero-cta{justify-content:center}
+
+footer{background:#000;color:rgba(255,255,255,.65);padding:44px 0 110px;font-size:.9rem}
+footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center}
+footer a:hover{color:#fff}
+footer .redes{display:flex;gap:20px}
+.demo-nota{width:100%;font-size:.78rem;opacity:.7;border-top:1px solid rgba(255,255,255,.12);padding-top:18px}
+
+/* botoes flutuantes */
+.flutuantes{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:70;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.fab{display:flex;align-items:center;gap:10px;height:58px;padding:0 22px 0 18px;border-radius:999px;font-weight:700;font-size:.95rem;box-shadow:0 12px 30px -8px rgba(0,0,0,.55);transition:transform .25s}
+.fab:hover{transform:translateY(-3px) scale(1.03)}
+.fab svg{width:28px;height:28px;fill:currentColor}
+.fab-whats{background:#25D366;color:#073b1b;position:relative}
+.fab-whats::after{content:"";position:absolute;inset:0;border-radius:inherit;border:2px solid #25D366;animation:pulso 2.4s infinite}
+@keyframes pulso{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.35,1.5);opacity:0}}
+.fab-ifood{background:#EA1D2C;color:#fff;height:50px}
+.fab-ifood svg{width:22px;height:22px}
+
+/* animacao de scroll */
+.js .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .reveal.vis{opacity:1;transform:none}
+.js .reveal-l{transform:translateX(-40px)}.js .reveal-r{transform:translateX(40px)}
+
+@media (max-width:900px){
+  section{padding:72px 0}
+  .sobre-grid,.local-grid{grid-template-columns:1fr;gap:40px}
+  .sobre-img::before{display:none}
+  .galeria-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+  .galeria-grid.g6 figure:nth-child(1){grid-column:span 2;grid-row:span 1}
+  .galeria-grid.g6 figure:nth-child(6){grid-column:span 2}
+  .logo{font-size:1.1rem;white-space:nowrap;max-width:calc(100vw - 100px);overflow:hidden;text-overflow:ellipsis}.logo i{width:30px;height:30px}
+  .burger{display:block}
+  nav.menu{position:fixed;inset:0 0 0 auto;width:min(320px,82vw);background:var(--fundo);flex-direction:column;justify-content:center;gap:26px;transform:translateX(105%);transition:transform .4s;box-shadow:-20px 0 60px rgba(0,0,0,.5);z-index:55}
+  header.topo.aberto nav.menu{transform:none}
+  nav.menu a{color:var(--texto)!important;font-size:1.2rem}
+  header.topo.aberto .burger{z-index:60}
+  header.topo.aberto .burger span::before,header.topo.aberto .burger span::after{background:var(--texto)}
+  .hero{padding:120px 0 100px}
+  .itens{grid-template-columns:1fr}
+  .item-foto{width:96px;height:96px}
+  .fab span.rot{display:none}
+  .fab{padding:0;width:58px;justify-content:center}
+  .fab-ifood{width:50px}
+  .hero-cta .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-img,.fab-whats::after,.scroll-ind::after{animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body class="tem-faixa">
+<div class="faixa-demo">EXEMPLO · Demonstração fictícia de site — nome, endereço, preços e contatos não são reais</div>
+<header class="topo" id="topo">
+  <div class="container">
+    <a href="#inicio" class="logo"><i>F</i>Forno Nobre (EXEMPLO)</a>
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+    <nav class="menu">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#local">Como chegar</a>
+      <a class="btn btn-primario" href="https://www.ifood.com.br/" target="_blank" rel="noopener">Pedir agora</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-img" style="background-image:url('https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?auto=format&amp;fit=crop&amp;w=2000&amp;q=75')"></div>
+  <div class="container">
+    <div class="hero-box">
+      <span class="eyebrow reveal">Pizzaria artesanal · Vila Madalena</span>
+      <h1 class="reveal" style="--d:.1s">Massa de 48 horas. Forno a lenha. Pizza que vira assunto.</h1>
+      <p class="lead reveal" style="--d:.2s">Ingredientes frescos, fermentação lenta e borda que estala. Peça agora e receba quentinha em casa.</p>
+      <div class="hero-cta reveal" style="--d:.3s">
+        <a class="btn btn-ifood" href="https://www.ifood.com.br/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l1 14H5L6 7zm3-1a3 3 0 0 1 6 0h-2a1 1 0 0 0-2 0H9z"/></svg>Pedir no iFood</a><a class="btn btn-whats" href="https://wa.me/5511900000000?text=Ol%C3%A1%21+Vim+pelo+site+do+Forno+Nobre+%28exemplo%29+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Chamar no WhatsApp</a><a class="btn btn-borda" href="#cardapio">Ver cardápio</a>
+      </div>
+      <div class="hero-info reveal" style="--d:.4s">
+        <div><b>18h às 23h30</b>Ter a Dom</div><div><b>Vila Madalena</b>São Paulo</div><div><b>★ 4,8</b>+1.200 avaliações</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-ind" aria-hidden="true"></div>
+</section>
+
+<section class="destaques"><div class="container dest-grid"><div class="dest reveal" style="--d:0.0s"><div class="ico">🔥</div><h3>Forno a lenha</h3><p>Assadas a 450 °C em menos de 90 segundos, para borda leve e aerada.</p></div><div class="dest reveal" style="--d:0.1s"><div class="ico">🌿</div><h3>Ingredientes frescos</h3><p>Tomate italiano, manjericão da horta e queijos selecionados.</p></div><div class="dest reveal" style="--d:0.2s"><div class="ico">🛵</div><h3>Entrega rápida</h3><p>Chega quente e crocante. Peça pelo iFood ou direto no WhatsApp.</p></div></div></section>
+
+<section id="sobre">
+  <div class="container sobre-grid">
+    <div class="sobre-img reveal reveal-l"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1000&amp;q=75" alt="Ambiente do Forno Nobre (EXEMPLO)" loading="lazy"></div>
+    <div class="sobre-txt reveal reveal-r">
+      <span class="eyebrow">Nossa história</span>
+      <h2 class="section-title">Tradição na massa, carinho em cada fatia</h2>
+      <p>O Forno Nobre nasceu da paixão por pizza de verdade: massa de longa fermentação, molho simples e ingredientes que falam por si.</p><p>Aqui, cada pizza é aberta à mão e assada na hora. Um ambiente acolhedor para jantar com a família ou pedir do conforto de casa.</p>
+      <div class="numeros"><div><b>48h</b><span>de fermentação</span></div><div><b>4,8★</b><span>nota no Google</span></div><div><b>+1.200</b><span>avaliações</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="cardapio">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow">Cardápio</span>
+      <h2 class="section-title">Escolha a sua favorita</h2>
+      <p class="section-sub">Preços e itens ilustrativos (exemplo).</p>
+    </div>
+    <div class="abas reveal" role="tablist"><button class="aba" role="tab" data-alvo="cat-0-pizzas" aria-selected="false">Pizzas</button><button class="aba" role="tab" data-alvo="cat-1-entradas" aria-selected="false">Entradas</button><button class="aba" role="tab" data-alvo="cat-2-bebidas-e-sobremesas" aria-selected="false">Bebidas e sobremesas</button></div>
+    <div class="cat" id="cat-0-pizzas"><h3 class="cat-nome">Pizzas</h3><div class="itens"><article class="item"><img class="item-foto" src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=70" alt="Margherita" loading="lazy" onerror="this.style.visibility='hidden'"><div class="item-corpo"><div class="item-topo"><h3>Margherita</h3><span class="preco">R$ 54,90</span></div><p>Molho de tomate italiano, muçarela de búfala, manjericão fresco e azeite.</p><span class="tag">Clássica</span></div></article><article class="item"><img class="item-foto" src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=70" alt="Rúcula &amp; Parma" loading="lazy" onerror="this.style.visibility='hidden'"><div class="item-corpo"><div class="item-topo"><h3>Rúcula &amp; Parma</h3><span class="preco">R$ 69,90</span></div><p>Muçarela, presunto de Parma, rúcula fresca e lascas de grana padano.</p><span class="tag">Mais pedida</span></div></article><article class="item"><img class="item-foto" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=70" alt="Calabresa Nobre" loading="lazy" onerror="this.style.visibility='hidden'"><div class="item-corpo"><div class="item-topo"><h3>Calabresa Nobre</h3><span class="preco">R$ 52,00</span></div><p>Calabresa artesanal, cebola roxa, muçarela e orégano.</p></div></article><article class="item"><img class="item-foto" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=70" alt="Quatro Queijos" loading="lazy" onerror="this.style.visibility='hidden'"><div class="item-corpo"><div class="item-topo"><h3>Quatro Queijos</h3><span class="preco">R$ 64,90</span></div><p>Muçarela, gorgonzola, parmesão e provolone.</p></div></article></div></div><div class="cat" id="cat-1-entradas"><h3 class="cat-nome">Entradas</h3><div class="itens"><article class="item"><img class="item-foto" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=70" alt="Costelinha ao molho barbecue" loading="lazy" onerror="this.style.visibility='hidden'"><div class="item-corpo"><div class="item-topo"><h3>Costelinha ao molho barbecue</h3><span class="preco">R$ 58,00</span></div><p>Porção para dividir, com batatas rústicas.</p></div></article><article class="item"><div class="item-corpo"><div class="item-topo"><h3>Focaccia de alecrim</h3><span class="preco">R$ 24,00</span></div><p>Pão artesanal com azeite, sal grosso e alecrim.</p></div></article><article class="item"><div class="item-corpo"><div class="item-topo"><h3>Bruschetta caprese</h3><span class="preco">R$ 29,00</span></div><p>Tomate, muçarela de búfala e manjericão.</p></div></article></div></div><div class="cat" id="cat-2-bebidas-e-sobremesas"><h3 class="cat-nome">Bebidas e sobremesas</h3><div class="itens"><article class="item"><div class="item-corpo"><div class="item-topo"><h3>Refrigerante lata</h3><span class="preco">R$ 7,00</span></div><p>Coca-Cola, Guaraná ou Soda.</p></div></article><article class="item"><div class="item-corpo"><div class="item-topo"><h3>Suco natural 400 ml</h3><span class="preco">R$ 12,00</span></div><p>Laranja, limão ou abacaxi com hortelã.</p></div></article><article class="item"><div class="item-corpo"><div class="item-topo"><h3>Petit gâteau</h3><span class="preco">R$ 26,00</span></div><p>Bolinho de chocolate com sorvete de creme.</p><span class="tag">Sobremesa</span></div></article></div></div>
+    <div class="cta-cardapio reveal"><a class="btn btn-ifood" href="https://www.ifood.com.br/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l1 14H5L6 7zm3-1a3 3 0 0 1 6 0h-2a1 1 0 0 0-2 0H9z"/></svg>Pedir pelo iFood</a><a class="btn btn-whats" href="https://wa.me/5511900000000?text=Ol%C3%A1%21+Vim+pelo+site+do+Forno+Nobre+%28exemplo%29+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Pedir pelo WhatsApp</a></div>
+  </div>
+</section>
+
+<section id="galeria"><div class="container"><div class="center reveal"><span class="eyebrow">Galeria</span><h2 class="section-title">Feito para dar água na boca</h2></div><div class="galeria-grid g6"><figure class="reveal" style="--d:0.00s"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&amp;fit=crop&amp;w=900&amp;q=70" alt="Foto 1 de Forno Nobre (EXEMPLO)" loading="lazy" onerror="this.style.visibility='hidden'"></figure><figure class="reveal" style="--d:0.08s"><img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&amp;fit=crop&amp;w=700&amp;q=70" alt="Foto 2 de Forno Nobre (EXEMPLO)" loading="lazy" onerror="this.style.visibility='hidden'"></figure><figure class="reveal" style="--d:0.16s"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&amp;fit=crop&amp;w=700&amp;q=70" alt="Foto 3 de Forno Nobre (EXEMPLO)" loading="lazy" onerror="this.style.visibility='hidden'"></figure><figure class="reveal" style="--d:0.24s"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&amp;fit=crop&amp;w=700&amp;q=70" alt="Foto 4 de Forno Nobre (EXEMPLO)" loading="lazy" onerror="this.style.visibility='hidden'"></figure><figure class="reveal" style="--d:0.00s"><img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?auto=format&amp;fit=crop&amp;w=700&amp;q=70" alt="Foto 5 de Forno Nobre (EXEMPLO)" loading="lazy" onerror="this.style.visibility='hidden'"></figure><figure class="reveal" style="--d:0.08s"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=900&amp;q=70" alt="Foto 6 de Forno Nobre (EXEMPLO)" loading="lazy" onerror="this.style.visibility='hidden'"></figure></div></div></section>
+<section id="depoimentos"><div class="container"><div class="center reveal"><span class="eyebrow">Avaliações</span><h2 class="section-title">Quem prova, volta</h2></div><div class="dep-grid"><div class="dep reveal" style="--d:0.0s"><div class="estrelas">★★★★★</div><p>“A melhor massa que já comi. Chegou quentinha e a borda estalando.”</p><span>Cliente exemplo 1</span></div><div class="dep reveal" style="--d:0.1s"><div class="estrelas">★★★★★</div><p>“Ambiente lindo e atendimento excelente. A Rúcula &amp; Parma é obrigatória.”</p><span>Cliente exemplo 2</span></div><div class="dep reveal" style="--d:0.2s"><div class="estrelas">★★★★★</div><p>“Pedi pelo iFood e veio rápido. Voltarei com certeza.”</p><span>Cliente exemplo 3</span></div></div></div></section>
+
+<section id="local">
+  <div class="container local-grid">
+    <div class="reveal reveal-l">
+      <span class="eyebrow">Localização</span>
+      <h2 class="section-title">Venha nos visitar</h2>
+      <ul class="info-list"><li><div class="i">📍</div><div><b>Endereço</b><span>Rua Exemplo, 123 (endereço fictício)<br>Vila Madalena, São Paulo</span></div></li><li><div class="i">🕒</div><div><b>Horários</b><span>Ter a Dom: 18h às 23h30<br>Segunda: Fechado</span></div></li><li><div class="i">📞</div><div><b>Contato</b><span>(11) 90000-0000</span></div></li><li><div class="i">💳</div><div><b>Pagamento</b><span>Pix, cartões e vale-refeição</span></div></li></ul>
+      <div class="local-btns"><a class="btn btn-primario" href="https://www.google.com/maps/search/?api=1&amp;query=Vila+Madalena+S%C3%A3o+Paulo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>Abrir no Google Maps</a><a class="btn btn-whats" href="https://wa.me/5511900000000?text=Ol%C3%A1%21+Vim+pelo+site+do+Forno+Nobre+%28exemplo%29+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>WhatsApp</a></div>
+    </div>
+    <div class="mapa reveal reveal-r"><iframe src="https://www.google.com/maps?q=Vila+Madalena,+S%C3%A3o+Paulo&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa - Forno Nobre (EXEMPLO)" allowfullscreen></iframe></div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container reveal">
+    <h2>Bateu a fome?</h2>
+    <p>Peça agora pelo iFood ou chame no WhatsApp e receba sua pizza quentinha.</p>
+    <div class="hero-cta"><a class="btn btn-ifood" href="https://www.ifood.com.br/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l1 14H5L6 7zm3-1a3 3 0 0 1 6 0h-2a1 1 0 0 0-2 0H9z"/></svg>Pedir no iFood</a><a class="btn btn-whats" href="https://wa.me/5511900000000?text=Ol%C3%A1%21+Vim+pelo+site+do+Forno+Nobre+%28exemplo%29+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Pedir no WhatsApp</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div>© 2026 Forno Nobre (EXEMPLO) · Vila Madalena, São Paulo</div>
+    <div class="redes"><a href="https://instagram.com/exemplo.fornonobre" target="_blank" rel="noopener">Instagram</a><a href="https://www.ifood.com.br/" target="_blank" rel="noopener">iFood</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Vila+Madalena+S%C3%A3o+Paulo" target="_blank" rel="noopener">Google Maps</a></div>
+    <div class="demo-nota">Esta é uma página de demonstração criada como exemplo. Fotos ilustrativas (Unsplash). Nenhum dado aqui representa um estabelecimento real.</div>
+  </div>
+</footer>
+
+<div class="flutuantes">
+  <a class="fab fab-ifood" href="https://www.ifood.com.br/" target="_blank" rel="noopener" aria-label="Pedir no iFood"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l1 14H5L6 7zm3-1a3 3 0 0 1 6 0h-2a1 1 0 0 0-2 0H9z"/></svg><span class="rot">Pedir no iFood</span></a>
+  <a class="fab fab-whats" href="https://wa.me/5511900000000?text=Ol%C3%A1%21+Vim+pelo+site+do+Forno+Nobre+%28exemplo%29+e+gostaria+de+fazer+um+pedido." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg><span class="rot">WhatsApp</span></a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var topo=document.getElementById('topo');
+  function onScroll(){topo.classList.toggle('rolou',window.scrollY>40)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var burger=document.querySelector('.burger');
+  burger.addEventListener('click',function(){
+    var a=topo.classList.toggle('aberto');burger.setAttribute('aria-expanded',a);
+  });
+  document.querySelectorAll('nav.menu a').forEach(function(l){l.addEventListener('click',function(){topo.classList.remove('aberto');burger.setAttribute('aria-expanded','false')})});
+
+  var abas=document.querySelectorAll('.aba'),cats=document.querySelectorAll('.cat');
+  abas.forEach(function(b){b.addEventListener('click',function(){
+    abas.forEach(function(x){x.classList.remove('ativa');x.setAttribute('aria-selected','false')});
+    cats.forEach(function(c){c.classList.remove('ativa')});
+    b.classList.add('ativa');b.setAttribute('aria-selected','true');
+    var alvo=document.getElementById(b.dataset.alvo);if(alvo){alvo.classList.add('ativa')}
+  })});
+  if(abas[0]){abas[0].click()}
+
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }else{els.forEach(function(e){e.classList.add('vis')})}
+})();
+</script>
+</body>
+</html>
