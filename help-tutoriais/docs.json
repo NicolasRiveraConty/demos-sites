@@ -1,0 +1,71 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Ajuda Conty",
+  "colors": {
+    "primary": "#1A73E8",
+    "light": "#8AB4F8",
+    "dark": "#185ABC"
+  },
+  "favicon": "/favicon.svg",
+  "fonts": {
+    "family": "Inter"
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "appearance": {
+    "default": "light"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Tutoriais",
+        "icon": "book-open",
+        "groups": [
+          {
+            "group": "Dashboard",
+            "icon": "house",
+            "pages": ["index"]
+          },
+          {
+            "group": "Campanhas",
+            "icon": "megaphone",
+            "pages": ["campanhas"]
+          },
+          {
+            "group": "Criadores",
+            "icon": "search",
+            "pages": ["criadores/como-buscar-criadores"]
+          },
+          {
+            "group": "Mensagens",
+            "icon": "message-circle",
+            "pages": ["mensagens"]
+          },
+          {
+            "group": "Comunidades",
+            "icon": "users",
+            "pages": ["comunidades"]
+          },
+          {
+            "group": "Financeiro",
+            "icon": "wallet",
+            "pages": [
+              "financeiro/pagamentos",
+              "financeiro/assinatura",
+              "financeiro/repasses"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "contextual": {
+    "options": ["copy", "view"]
+  }
+}
